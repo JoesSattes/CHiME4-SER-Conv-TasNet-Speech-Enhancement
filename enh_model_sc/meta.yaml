@@ -1,0 +1,7 @@
+espnet: 0.9.9
+files:
+  model_file: exp/enh_train_enh_conv_tasnet_raw/6epoch.pth
+python: "3.7.6 \n[GCC 7.3.0]"
+torch: 1.7.1
+yaml_files:
+  train_config: exp/enh_train_enh_conv_tasnet_raw/config.yaml
