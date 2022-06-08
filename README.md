@@ -1,7 +1,7 @@
 # CHiME4-SER-Conv-TasNet-Speech-Enhancement
 This repository is developed for speech enhancement based on Conv-TasNet in speech emotion recognition using ESPNet framework.
 ```
-@inproceedings{inproceedings,
+@inproceedings{singkul2022thserse,
   author = {Yuenyong, Sumeth and Hnoohom, Narit and Wongpatikaseree, Konlakorn and Singkul, Sattaya},
   year = {2022},
   month = {05},
