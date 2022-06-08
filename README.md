@@ -14,12 +14,12 @@ audio = torch.unsqueeze(audio.mean(dim=0), dim=0) # convert to mono
 resample = True
 if resample: audio = kaldi.resample_waveform(audio, orig_freq=sample_rate, new_freq=16000)
 transform = Compose([RandomApply([SE_torch()], p=1.0), # enhance speech quality by reduce unnecessary information
-                      RandomApply([VtlpAug_torch(sr=16000)], p=0.5), # Simulate new speaker information by new vocal tract style
-                      RandomApply([Reverb(sample_rate=16000)], p=0.2) # Optional: traditional environment augmentation
-                      RandomApply([Noise()], p=0.2) # Optional: traditional environment augmentation
+                      RandomApply([VtlpAug_torch(sr=16000)], p=0.5), # simulate new speaker information by new vocal tract style
+                      RandomApply([Reverb(sample_rate=16000)], p=0.2) # optional: traditional environment augmentation
+                      RandomApply([Noise()], p=0.2) # optional: traditional environment augmentation
                       FilterBank(frame_length=50,
-                      frame_shift=10,
-                      num_mel_bins=60)])
+                                frame_shift=10,
+                                num_mel_bins=60)])
 audio_transform = transform({'feature': audio, 'emotion': 0})
 print('Successful! Transformed Audio:', audio_transform['feature'].shape)
 ```
