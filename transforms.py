@@ -161,13 +161,21 @@ def example_transform():
     audio = torch.unsqueeze(audio.mean(dim=0), dim=0) # convert to mono
     resample = True
     if resample:
-        audio = kaldi.resample_waveform(audio, orig_freq=44100, new_freq=16000)
+        audio = kaldi.resample_waveform(audio, orig_freq=sample_rate, new_freq=16000)
     transform = Compose([RandomApply([SE_torch()], p=1.0),
                             FilterBank(frame_length=50,
                                       frame_shift=10,
                                       num_mel_bins=60)])
     audio_transform = transform({'feature': audio, 'emotion': 0})
     print('Successful! Transformed Audio:', audio_transform['feature'].shape)
+    
+    transform_vtlp = Compose([RandomApply([SE_torch()], p=1.0),
+                              VtlpAug_torch(sr=16000), 
+                            FilterBank(frame_length=50,
+                                      frame_shift=10,
+                                      num_mel_bins=60)])
+    audio_transform_vtlp = transform_vtlp({'feature': audio, 'emotion': 0})
+    print('Successful! Transformed Audio with VTLP:', audio_transform_vtlp['feature'].shape) 
 
 example_transform()
     
