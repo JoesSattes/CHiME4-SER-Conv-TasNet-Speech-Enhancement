@@ -4,7 +4,7 @@ For more details, the pre-paper IEEE conference proceeding is available on [TH-S
 
 ## Testing this code
 ```python
-python transform.py
+python transforms.py
 ```
 
 ## Example for using this code
