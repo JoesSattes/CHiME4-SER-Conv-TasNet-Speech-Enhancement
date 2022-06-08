@@ -1,6 +1,6 @@
 # CHiME4-SER-Conv-TasNet-Speech-Enhancement
 This repository is developed for speech enhancement based on Conv-TasNet in speech emotion recognition using ESPNet framework.
-For more detail, the pre-paper IEEE conference proceeding is available on [TH-SERSE framework](https://www.researchgate.net/publication/360997197_Real-Time_Thai_Speech_Emotion_Recognition_With_Speech_Enhancement_Using_Time-Domain_Contrastive_Predictive_Coding_and_Conv-Tasnet)
+For more details, the pre-paper IEEE conference proceeding is available on [TH-SERSE framework](https://www.researchgate.net/publication/360997197_Real-Time_Thai_Speech_Emotion_Recognition_With_Speech_Enhancement_Using_Time-Domain_Contrastive_Predictive_Coding_and_Conv-Tasnet).
 
 ## Testing this code
 ```python
@@ -22,14 +22,6 @@ transform = Compose([RandomApply([SE_torch()], p=1.0), # enhance speech quality 
                       num_mel_bins=60)])
 audio_transform = transform({'feature': audio, 'emotion': 0})
 print('Successful! Transformed Audio:', audio_transform['feature'].shape)
-    
-    transform_vtlp = Compose([RandomApply([SE_torch()], p=1.0),
-                              VtlpAug_torch(sr=16000), 
-                            FilterBank(frame_length=50,
-                                      frame_shift=10,
-                                      num_mel_bins=60)])
-    audio_transform_vtlp = transform_vtlp({'feature': audio, 'emotion': 0})
-    print('Successful! Transformed Audio with VTLP:', audio_transform_vtlp['feature'].shape) 
 ```
 
 ## References
