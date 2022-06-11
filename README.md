@@ -27,13 +27,15 @@ print('Successful! Transformed Audio:', audio_transform['feature'].shape)
 ## References
 ```
 # main applied
-@inproceedings{singkul2022thserse,
-  author = {Yuenyong, Sumeth and Hnoohom, Narit and Wongpatikaseree, Konlakorn and Singkul, Sattaya},
-  year = {2022},
-  month = {05},
-  pages = {},
-  title = {Real-Time Thai Speech Emotion Recognition With Speech Enhancement Using Time-Domain Contrastive Predictive Coding and Conv-Tasnet}
-}
+@INPROCEEDINGS{9786444,
+  author={Yuenyong, Sumeth and Hnoohom, Narit and Wongpatikaseree, Konlakorn and Singkul, Sattaya},
+  booktitle={2022 7th International Conference on Business and Industrial Research (ICBIR)}, 
+  title={Real-Time Thai Speech Emotion Recognition With Speech Enhancement Using Time-Domain Contrastive Predictive Coding and Conv-Tasnet}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={78-83},
+  doi={10.1109/ICBIR54589.2022.9786444}}
 
 # SER environment idea
 @article{singkul2022vector,
