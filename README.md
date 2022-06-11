@@ -1,6 +1,6 @@
 # CHiME4-SER-Conv-TasNet-Speech-Enhancement
 This repository is developed for speech enhancement based on Conv-TasNet in speech emotion recognition using ESPNet framework.
-For more details, the pre-paper IEEE conference proceeding is available on [TH-SERSE framework](https://www.researchgate.net/publication/360997197_Real-Time_Thai_Speech_Emotion_Recognition_With_Speech_Enhancement_Using_Time-Domain_Contrastive_Predictive_Coding_and_Conv-Tasnet).
+For more details, the IEEE conference proceeding is available on [TH-SERSE framework](https://www.researchgate.net/publication/360997197_Real-Time_Thai_Speech_Emotion_Recognition_With_Speech_Enhancement_Using_Time-Domain_Contrastive_Predictive_Coding_and_Conv-Tasnet).
 
 ## Testing this code
 ```python
